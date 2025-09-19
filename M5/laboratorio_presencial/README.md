@@ -15,5 +15,5 @@ El objetivo principal es aprender a usar la función `main()` en nuestros progra
 No es necesario completar este repo desde casa — lo haremos juntos en clase.  
 
 
- **Nota:** Puedes ir dejando tus archivos aquí conforme avancemos.
+ **Nota:** Puedes ir agregando archivos a tu propio repo si deseas.
 
