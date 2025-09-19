@@ -4,22 +4,22 @@
 
 Este repositorio está destinado a los laboratorios que realizaremos **presencialmente en clase** durante el semestre. Aquí encontrarás carpetas y archivos correspondientes a cada práctica.
 
-## 📚 ¿Qué encontrarás aquí?
+## ¿Qué encontrarás aquí?
 
 - Múltiples carpetas, una por cada laboratorio
 - Instrucciones y archivos base para comenzar
 - Ejercicios enfocados en los temas vistos en clase
 
-## 🛠️ Requisitos
+## Requisitos
 
 Para trabajar con este repositorio necesitarás:
 
 - Visual Studio Code u otro editor de texto
 - Git instalado en tu computadora
 
-## 🚀 ¿Cómo usar este repositorio?
+## ¿Cómo usar este repositorio?
 
-Si deseas tu propia copia en lo trabajamos en clase:
+Si deseas tu propia copia en lo que trabajamos en clase:
 
 1. Hacer clic en el botón verde **“Code”**
 2. Seleccionar **“Download ZIP”**
