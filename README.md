@@ -1,12 +1,10 @@
-
-Jhon Regueros
-#angelica osuna 
 # Otono25-1400
 #Para los valientes
-
+#Marleny
 #David Cisneros 
-
 #Ana
+Jhon Regueros
+#angelica osuna 
 
 # Laboratorios en Clase – Otoño 2025
 
