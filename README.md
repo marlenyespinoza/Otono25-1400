@@ -1,6 +1,9 @@
 
 # Otono25-1400
 #Para los valientes
+
+#David Cisneros 
+
 #Ana
 
 # Laboratorios en Clase – Otoño 2025
@@ -32,3 +35,4 @@ Si deseas tu propia copia en lo que trabajamos en clase:
 
 
 Si deseas guardar tus trabajos para el futuro, guarda tus archivos en Classroom.
+
