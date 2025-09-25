@@ -1,5 +1,6 @@
 import turtle
 
+
 def configurar_tortuga():
     """Set up the turtle with initial settings."""
     t = turtle.Turtle()
