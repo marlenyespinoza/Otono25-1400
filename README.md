@@ -1,3 +1,15 @@
+# Otono25-1400
+#Para los valientes
+
+#BC
+#sm
+#New Updates by ETG
+#Marleny
+#David Cisneros 
+#Ana
+Jhon Regueros
+#angelica osuna 
+
 # Laboratorios en Clase – Otoño 2025
 
 ¡Bienvenidos/as!
@@ -27,4 +39,3 @@ Si deseas tu propia copia en lo que trabajamos en clase:
 
 
 Si deseas guardar tus trabajos para el futuro, guarda tus archivos en Classroom.
-
