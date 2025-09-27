@@ -8,6 +8,7 @@ def es_cuadrado_perfecto(n):
     # Asi que utiliza if para ver si n es menos que 0,
     # si lo es que devuelva un Falso para nuestro Booleano
    if n < 0:
+    return False
 
     # Calcular la raíz cuadrada entera del número
     raiz_entera = int(n ** 0.5)  
