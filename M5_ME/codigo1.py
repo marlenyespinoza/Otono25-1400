@@ -9,7 +9,7 @@ es_finde = False
 # Por ejemplo: ¿Puede salir hoy solo si tiene 18 años o más Y si tiene permiso?
 (edad >= 18) and (tiene_permiso)
 
-print("¿Puede salir solo?:", tiene_permiso)
+print("¿Puede salir solo?:", (edad >=18) and tiene_permiso)
 
 # TODO 2: Usa una expresión booleana con "or" para permitir salir si es fin de semana o tiene permiso
 puede_salir_2 = (es_finde) or (tiene_permiso)
@@ -29,7 +29,6 @@ no_tiene_permiso = False
 (edad >= 18) and (puede_conducir)
 print("Puede ir a la tienda solo?:", (edad >= 18) and puede_conducir) 
 #Usando or
-# Cambio
 no_licencia = (puede_conducir) or (no_tiene_permiso) 
 print("Puede ir en el auto?:", no_tiene_permiso)
 #Usando not
