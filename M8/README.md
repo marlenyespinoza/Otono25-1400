@@ -13,5 +13,5 @@ Escribe las respuestas a estas preguntas:
 2. ¿Cómo los descubriste?
 3. ¿Cómo los corregiste?
 
-## Instrucciones para menu.py:
-Descarga el pdf llamado menu y sigue las preguntas.
+## Instrucciones para gestor.py:
+Descarga el pdf llamado Gestor de Notas y sigue las preguntas.
