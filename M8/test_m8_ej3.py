@@ -1,50 +1,53 @@
-# test_encontrar_emails.py
-# Archivo de pruebas para la función encontrar_emails.
+# test_ordenar_lista.py
+# Archivo de pruebas para la función ordenar_de_mayor_a_menor.
 
 import pytest
 
 try:
-    from m8_codigo_ej3 import encontrar_emails
+    from M8.m8_ordenar_ej3 import ordenar_de_mayor_a_menor
 except ImportError:
     pytest.fail(
-        "No se pudo importar la función 'encontrar_emails' del archivo 'student_code_m8_ex3.py'.")
+        "No se pudo importar la función 'ordenar_de_mayor_a_menor' del archivo 'student_code_m9_ex3.py'.")
 
 
-def test_encontrar_multiples_emails():
-    """Prueba un texto que contiene varias direcciones de correo electrónico."""
-    texto = "Contacta a juan@test.com o a maria.lopez@web.es para más info."
-    esperado = ["juan@test.com", "maria.lopez@web.es"]
-    assert sorted(encontrar_emails(texto)) == sorted(esperado)
+def test_ordena_correctamente():
+    """Prueba que la lista se ordena de mayor a menor."""
+    lista = [3, 1, 4, 1, 5, 9, 2]
+    ordenar_de_mayor_a_menor(lista)
+    assert lista == [9, 5, 4, 3, 2, 1, 1]
 
 
-def test_texto_sin_emails():
-    """Prueba un texto que no contiene ninguna dirección de correo."""
-    texto = "Esta es una frase normal sin direcciones."
-    assert encontrar_emails(texto) == []
+def test_con_numeros_negativos():
+    """Prueba con una lista que incluye números negativos."""
+    lista = [-5, 10, -2, 0, 3]
+    ordenar_de_mayor_a_menor(lista)
+    assert lista == [10, 3, 0, -2, -5]
 
 
-def test_email_con_guiones_y_puntos():
-    """Prueba emails que contienen caracteres especiales como guiones y puntos."""
-    texto = "El correo es mi-nombre.apellido@un-dominio.largo.net"
-    esperado = ["mi-nombre.apellido@un-dominio.largo.net"]
-    assert encontrar_emails(texto) == esperado
+def test_lista_ya_ordenada():
+    """Prueba con una lista que ya está ordenada de mayor a menor."""
+    lista = [10, 8, 6, 4, 2]
+    ordenar_de_mayor_a_menor(lista)
+    assert lista == [10, 8, 6, 4, 2]
 
 
-def test_texto_vacio():
-    """Prueba con una cadena de entrada vacía."""
-    assert encontrar_emails("") == []
+def test_modifica_lista_en_lugar():
+    """
+    Verifica que la función modifica la lista original en lugar de crear una nueva.
+    Compara el 'id' del objeto antes y después de llamar a la función.
+    """
+    lista = [1, 2, 3]
+    id_antes = id(lista)
+    ordenar_de_mayor_a_menor(lista)
+    id_despues = id(lista)
+    assert id_antes == id_despues, "La función debe modificar la lista en el lugar, no crear una nueva."
 
 
-def test_emails_mezclados_con_texto():
-    """Prueba que los emails se extraen correctamente cuando están pegados a otros caracteres."""
-    texto = "Mi email es:info@sitio.com, por favor escribe."
-    esperado = ["info@sitio.com"]
-    assert encontrar_emails(texto) == esperado
-
-
-def test_retorno_es_lista():
-    """Verifica que la función siempre devuelve una lista."""
-    assert isinstance(encontrar_emails("un texto de prueba"), list)
+def test_retorna_none():
+    """Verifica que la función no devuelve ningún valor (retorna None)."""
+    lista = [1, 2, 3]
+    resultado = ordenar_de_mayor_a_menor(lista)
+    assert resultado is None, "La función no debe devolver ningún valor."
 
 
 # make this module executable

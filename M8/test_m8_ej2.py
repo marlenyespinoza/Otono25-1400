@@ -1,57 +1,49 @@
-# test_leer_puntajes.py
-# Archivo de pruebas para la función promedio_de_archivo.
+# test_eliminar_elemento.py
+# Archivo de pruebas para la función eliminar_elemento.
 
 import pytest
 
 try:
-    # TODO: Cambia 'solution_m8_ex2' por 'student_code_m8_ex2' si estás usando el código del estudiante.
-    # from solution_m8_ex2 import promedio_de_archivo
-    from student_code_m8_ex2 import promedio_de_archivo
+    from m8_ocurrencias_ej2 import eliminar_elemento
 except ImportError:
     pytest.fail(
-        "No se pudo importar la función 'promedio_de_archivo' del archivo 'student_code_m8_ex2.py'.")
+        "No se pudo importar la función 'eliminar_elemento' del archivo 'student_code_m9_ex2.py'.")
 
 
-def test_archivo_valido(tmp_path):
-    """Prueba la función con un archivo de puntajes válido."""
-    # tmp_path es un fixture de pytest que crea un directorio temporal
-    directorio = tmp_path / "sub"
-    directorio.mkdir()
-    archivo_prueba = directorio / "puntajes.txt"
-    archivo_prueba.write_text("100\n90\n80\n")
-
-    assert promedio_de_archivo(archivo_prueba) == 90.0
+def test_eliminar_multiples_ocurrencias():
+    """Prueba eliminando un elemento que aparece varias veces."""
+    assert eliminar_elemento([1, 2, 1, 3, 1, 4], 1) == [2, 3, 4]
 
 
-def test_archivo_no_encontrado():
-    """Prueba que la función maneja FileNotFoundError."""
-    assert promedio_de_archivo(
-        "archivo_que_no_existe.txt") == "Error: el archivo no fue encontrado."
+def test_eliminar_una_ocurrencia():
+    """Prueba eliminando un elemento que aparece una sola vez."""
+    assert eliminar_elemento(["a", "b", "c"], "b") == ["a", "c"]
 
 
-def test_archivo_vacio(tmp_path):
-    """Prueba con un archivo que existe pero está vacío."""
-    archivo_prueba = tmp_path / "vacio.txt"
-    archivo_prueba.write_text("")
-
-    assert promedio_de_archivo(archivo_prueba) == 0.0
+def test_elemento_no_existe():
+    """Prueba con un elemento que no está en la lista. Debería devolver una copia de la lista."""
+    lista = [10, 20, 30]
+    assert eliminar_elemento(lista, 40) == [10, 20, 30]
 
 
-def test_datos_no_numericos(tmp_path):
-    """Prueba con un archivo que contiene datos no numéricos."""
-    archivo_prueba = tmp_path / "datos_malos.txt"
-    archivo_prueba.write_text("100\nnoventa\n80\n")
-
-    assert promedio_de_archivo(
-        archivo_prueba) == "Error: el archivo contiene datos no numéricos."
+def test_lista_vacia():
+    """Prueba con una lista de entrada vacía."""
+    assert eliminar_elemento([], 5) == []
 
 
-def test_con_un_solo_puntaje(tmp_path):
-    """Prueba con un archivo que contiene un solo puntaje."""
-    archivo_prueba = tmp_path / "uno.txt"
-    archivo_prueba.write_text("95\n")
+def test_eliminar_todos_los_elementos():
+    """Prueba el caso en que todos los elementos de la lista deben ser eliminados."""
+    assert eliminar_elemento(["x", "x", "x"], "x") == []
 
-    assert promedio_de_archivo(archivo_prueba) == 95.0
+
+def test_no_modifica_lista_original():
+    """Verifica que la función no modifica la lista original (importante sobre referencias)."""
+    lista_original = ["rojo", "verde", "azul"]
+    lista_copia = lista_original.copy()
+
+    eliminar_elemento(lista_original, "verde")
+
+    assert lista_original == lista_copia, "La función no debe modificar la lista original."
 
 
 # make this module executable

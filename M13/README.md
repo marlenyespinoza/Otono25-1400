@@ -1,5 +1,5 @@
 
-# ✅ Módulo 9 – Diccionarios y Tuplas
+# ✅ Módulo 13 – Cadenas, archivos, expresiones regulares y excepciones
 Este módulo está diseñado para ayudarte a usar cadenas de texto, usar archivos y manejar excepciones en el codigo. 
 
 ## 📂 Contenido
@@ -29,7 +29,7 @@ python #test_mX_ejX.py
 
 4. Entrega en GitHub
 - Sube todas las carpetas con tus soluciones 
-- Entrega el enlace a tu carpeta `modulo_09` en Canvas.
+- Entrega el enlace a tu carpeta `modulo_13` en Canvas.
 - ✅ Asegúrate de que el repositorio esté público o que hayas compartido permisos correctamente.
 
 
