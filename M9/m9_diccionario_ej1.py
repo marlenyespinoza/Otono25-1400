@@ -3,34 +3,34 @@ PROYECTO DE PROGRAMACIÓN: Funciones con cadenas, listas y diccionarios
 
 Instrucciones:
 Este archivo contiene varias tareas relacionadas con el uso de cadenas, listas y diccionarios.
-Tu objetivo es completar las funciones que aparecen con la etiqueta TODO y seguir las instrucciones.
+Completa las tareas, terminando los tres TODO.
 
 Puedes probar tus funciones utilizando el bloque "if __name__ == '__main__':" al final del archivo.
 """
 
 # ============================
-# TAREA 1: has_duplicates
+# TAREA 1: duplicado
 # ============================
 
-def has_duplicates(seq):
+def duplicados(seq):
     """
     Devuelve True si hay elementos duplicados en la secuencia (lista o cadena), de lo contrario False.
 
     seq: lista o cadena
 
     Ejemplos:
-    has_duplicates('hola') -> False
-    has_duplicates('llama') -> True
+    duplicados('hola') -> False #no tiene letras duplicadas
+    duplicados('llama') -> True  #si tiene letras duplicadas
     """
-    # TODO: Escribe tu implementación aquí
+    # TODO: Termina la funcion
     pass
 
 
 # ============================
-# TAREA 2: find_repeats
+# TAREA 2: encontrar_repeticiones
 # ============================
 
-def find_repeats(counter):
+def encontrar_repeticiones(counter):
     """
     Devuelve una lista de claves cuyo valor en el diccionario es mayor que 1.
 
@@ -39,17 +39,17 @@ def find_repeats(counter):
     returns: lista de claves repetidas
 
     Ejemplo:
-    find_repeats({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
+    encontrar_repeticiones({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
     """
-    # TODO: Escribe tu implementación aquí
+    # TODO: Termina la funcion
     return []
 
 
 # ============================
-# TAREA 3: add_counters
+# TAREA 3: sumando_counters
 # ============================
 
-def add_counters(dict1, dict2):
+def suma_counters(dict1, dict2):
     """
     Combina dos diccionarios sumando los valores de las claves que aparecen en ambos.
 
@@ -60,14 +60,14 @@ def add_counters(dict1, dict2):
     Ejemplo:
     dict1 = {'a': 2, 'b': 1}
     dict2 = {'a': 1, 'c': 4}
-    add_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
+    sumando_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
-    # TODO: Escribe tu implementación aquí
+    # TODO: Termina la funcion
     pass
 
 
 # ============================
-# TAREA 4: is_interlocking
+# is_interlocking
 # ============================
 
 def is_interlocking(word, word_list):
@@ -85,15 +85,15 @@ def is_interlocking(word, word_list):
 
     Tip: Usa word[::2] y word[1::2] para obtener las dos mitades entrelazadas.
     """
-    # TODO: Escribe tu implementación aquí
+   
     pass
 
 
 # ============================
-# FUNCIONES DE APOYO (opcional)
+# FUNCION DE APOYO
 # ============================
 
-def value_counts(word):
+def contar_valores(word):
     """
     Cuenta cuántas veces aparece cada letra en una palabra.
 
@@ -102,7 +102,7 @@ def value_counts(word):
     returns: diccionario {letra: cantidad}
 
     Ejemplo:
-    value_counts('banana') -> {'b':1, 'a':3, 'n':2}
+    contar_valores('banana') -> {'b':1, 'a':3, 'n':2}
     """
     counter = {}
     for letter in word:
@@ -121,18 +121,18 @@ if __name__ == '__main__':
     # Puedes descomentar estas pruebas y añadir más para verificar tu código
 
     print("--- Pruebas de has_duplicates ---")
-    print(has_duplicates('hola'))        # False
-    print(has_duplicates('llama'))       # True
+    print(duplicados('hola'))        # False
+    print(duplicados('llama'))       # True
 
     print("\n--- Pruebas de find_repeats ---")
-    test_counter = value_counts('banana')
+    test_counter = encontrar_repeticiones('banana')
     print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
-    print(find_repeats(test_counter))    # ['a', 'n']
+    print(encontrar_repeticiones(test_counter))    # ['a', 'n']
 
     print("\n--- Pruebas de add_counters ---")
-    c1 = value_counts('brontosaurus')
-    c2 = value_counts('apatosaurus')
-    print(add_counters(c1, c2))
+    c1 = encontrar_repeticiones('brontosaurios')
+    c2 = encontrar_repeticiones('apatosaurios')
+    print(suma_counters(c1, c2))
 
     print("\n--- Pruebas de is_interlocking ---")
     diccionario = {'zapato', 'frío', 'pato', 'cielo', 'dado'}

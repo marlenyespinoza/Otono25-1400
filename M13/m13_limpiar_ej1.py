@@ -64,7 +64,7 @@ Entrada: '!' -> Salida: 'Error: el nombre de usuario solo puede contener letras.
 """
 
 """
-# TODO
+# TODO Responde las siguientes preguntas:
 
 1. Porque es importante usar .strip() antes que .lower(). Que pasaria si los
  pones al reves?

@@ -1,6 +1,12 @@
-# --- Base de datos de Inventario ---
+# --- Base de datos de Inventario --- Trabajo entre parejas ---
+
+## Lee el README. Completa el codigo. Responde las preguntas. 
+## Submite una captura de pantalla, que funciona tu codigo como se espera. 
+
 # El diccionario principal: la clave es el nombre del producto (string),
 # y el valor es una tupla (precio_unitario, cantidad_en_stock).
+
+
 inventario = {
     "Laptop": (1200.00, 15),
     "Mouse Inalámbrico": (25.50, 40),
@@ -24,7 +30,7 @@ def agregar_producto(nombre, precio, stock):
     # Crea una NUEVA TUPLA con el precio y stock, y úsala para actualizar
     # el diccionario 'inventario' con el nombre del producto como CLAVE.
     
-    # [Tu código va aquí]
+    # [código va aquí]
     
     print(f"\n✅ Producto '{nombre}' agregado/actualizado.")
 
@@ -64,8 +70,8 @@ mostrar_inventario()
 
 # 4. Buscar el precio de un producto (llamada a TODO 2)
 precio_mouse = buscar_precio("Mouse Inalámbrico")
-print(f"\n🔍 Precio del Mouse Inalámbrico: ${precio_mouse:.2f}")
+print(f"\n Precio del Mouse Inalámbrico: ${precio_mouse:.2f}")
 
 # 5. Calcular el valor total (llamada a TODO 3)
 total = valor_total_inventario()
-print(f"\n💰 Valor total estimado de todo el inventario: ${total:,.2f}")
+print(f"\n Valor total estimado de todo el inventario: ${total:,.2f}")
