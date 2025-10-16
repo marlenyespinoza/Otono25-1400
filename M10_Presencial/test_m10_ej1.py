@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from m10_rectangulo_eq_ej1 import Rectangulo
+    from M10_Presencial.m10_rectangulo_eq_ej1 import Rectangulo
 
 except ImportError:
     pytest.fail(
