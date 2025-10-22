@@ -23,7 +23,14 @@ def has_duplicates(seq):
     has_duplicates('llama') -> True
     """
     # TODO: Escribe tu implementación aquí
-    pass
+    has_duplicates = set()
+    for element in seq:
+        if element in has_duplicates:
+            return True
+        has_duplicates.add(element)
+    return False
+
+    
 
 
 # ============================
@@ -42,7 +49,11 @@ def find_repeats(counter):
     find_repeats({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
     """
     # TODO: Escribe tu implementación aquí
-    return []
+    find_repeats = []
+    for key, value in counter.items():
+        if value > 1:
+            find_repeats.append(key)
+    return find_repeats
 
 
 # ============================
@@ -63,7 +74,13 @@ def add_counters(dict1, dict2):
     add_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
     # TODO: Escribe tu implementación aquí
-    pass
+    add_counters = dict1.copy()
+    for key, value in dict2.items():
+        if key in add_counters:
+            add_counters[key] += value
+        else:
+            add_counters[key] = value
+    return add_counters
 
 
 # ============================
@@ -86,7 +103,9 @@ def is_interlocking(word, word_list):
     Tip: Usa word[::2] y word[1::2] para obtener las dos mitades entrelazadas.
     """
     # TODO: Escribe tu implementación aquí
-    pass
+    first_half = word[::2]
+    second_half = word[1::2]
+    return first_half in word_list and second_half in word_list
 
 
 # ============================
@@ -121,21 +140,21 @@ if __name__ == '__main__':
     # Puedes descomentar estas pruebas y añadir más para verificar tu código
 
     print("--- Pruebas de has_duplicates ---")
-    print(has_duplicates('hola'))        # False
-    print(has_duplicates('llama'))       # True
+    print(has_duplicates('Hello'))       # False
+    print(has_duplicates('Hola'))       # False
 
     print("\n--- Pruebas de find_repeats ---")
-    test_counter = value_counts('banana')
-    print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
-    print(find_repeats(test_counter))    # ['a', 'n']
+    test_counter = value_counts('platanos')
+    print(test_counter)  # {'p': 1, 'l': 1, 'a': 2, 't': 1, 'n': 1, 'o': 1, 's': 1}
+    print(find_repeats(test_counter))    # ['a']
 
     print("\n--- Pruebas de add_counters ---")
-    c1 = value_counts('brontosaurus')
-    c2 = value_counts('apatosaurus')
+    c1 = value_counts('paralelepipedo')
+    c2 = value_counts('paranoico')
     print(add_counters(c1, c2))
 
     print("\n--- Pruebas de is_interlocking ---")
-    diccionario = {'zapato', 'frío', 'pato', 'cielo', 'dado'}
+    diccionario = {'hechizo', 'escoba', 'perros', 'pajaro', 'conejo', 'lobo', 'zapato', 'frío', 'es', 'colar', 'izado'}
     print(is_interlocking('escolarizado', diccionario))  # True o False dependiendo del set
 
     # Agrega más pruebas según necesites
