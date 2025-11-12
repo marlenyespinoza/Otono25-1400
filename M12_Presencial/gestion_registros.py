@@ -5,14 +5,15 @@
 """
 
 # w Funcion para escribir en el archivo
-def escribirDocumento(data):
-    with open("salida.txt", "w", encoding="utf-8") as fileToWriteTo:
-        fileToWriteTo.write(data + "\n")
+#def escribirDocumento(data):
+#    with open("salida.txt", "w", encoding="utf-8") as fileToWriteTo:
+#        fileToWriteTo.write(data + "\n")
+
 
 # TODO 1:
 # Reemplazar 'Megan,38,desayuno' con su nombre, edad, y su preferencia entre desayuno almuerzo, o cena.
-miEntrada = 'Megan,38,desayuno'
-escribirDocumento(miEntrada)
+#miEntrada = 'Megan,38,desayuno'
+#escribirDocumento(miEntrada)
 
 # TODO 2:
 # a Despues de verificar el documento salida.txt, agregar 3 lineas con datos de companeros. 
