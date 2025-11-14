@@ -45,6 +45,7 @@ class Rectangulo:
             return False
         
 
+
         # TODO: Paso 2. Compara los atributos y devuelve el resultado.
         return self.ancho == otro.ancho and self.alto == otro.alto
 
