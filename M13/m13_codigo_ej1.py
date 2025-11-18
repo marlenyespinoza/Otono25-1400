@@ -29,18 +29,19 @@ def formatear_nombre_usuario(nombre):
       str: El nombre de usuario limpio y en minúsculas, o un mensaje de error.
     """
     # TODO: Paso 1. Elimina espacios en blanco de los extremos.
-    nombre_limpio = nombre.strip()
+    nombre_limpio = nombre.strip() 
+
 
     # TODO: Paso 2. Convierte la cadena a minúsculas.
-    nombre_final =  # Usa .lower() en la cadena ya limpia.
+    nombre_final = nombre_limpio.lower()
 
     # TODO: Paso 3. Comprueba si la cadena final contiene solo letras.
-    # if nombre_final.isalpha() ...:
-    # TODO: Paso 4. Si es válido, devuelve el nombre_final.
-    # return ...
-    # else:
-    # TODO: Paso 5. Si no es válido, devuelve un mensaje de error.
-    return "Error: el nombre de usuario solo puede contener letras."
+    if nombre_final.isalpha():
+        # TODO: Paso 4. Si es válido, devuelve el nombre_final.
+        return nombre_final
+    else:
+        # TODO: Paso 5. Si no es válido, devuelve un mensaje de error.
+        return "Error: el nombre de usuario solo puede contener letras."
 
 
 # --- Bloque para probar tu función ---
@@ -67,13 +68,21 @@ Entrada: '!' -> Salida: 'Error: el nombre de usuario solo puede contener letras.
 # TODO
 
 1. Porque es importante usar .strip() antes que .lower(). Que pasaria si los
- pones al reves?
+ pones al reves? Porque el .strip() es para eliminar espacios en blanco y no afecta
+ las letras, mientras que .lower() convierte todas las letras a minúsculas pero no
+ elimina espacios. Si se usara .lower() primero, los espacios seguirían ahí y no
+ serían eliminados, lo que podría llevar a resultados inesperados si el nombre
+ de usuario tiene espacios al principio o al final.
 2. La función actual devuelve un mensaje de error general: "Error: el
  nombre de usuario solo puede contener letras." Si quisiéramos expandir
  la función para permitir números pero seguir previniendo símbolos
  (como !, @, #), ¿cómo modificarías el paso de validación actual
  (que usa .isalpha()), y cómo se vería un mensaje de error más específico
- en este caso?
+ en este caso? Usarías el método .isalnum() en lugar de .isalpha() para permitir
+ tanto letras como números. El mensaje de error podría modificarse a:
+ "Error: el nombre de usuario solo puede contener letras y números."
 3. ¿Por qué falla el control de validación (.isalpha() devuelve False)
- una entrada como "Usario Con Espacio"?
+ una entrada como "Usario Con Espacio"? Porque .isalpha() verifica si todos los caracteres en la cadena son letras
+ y no permite espacios. Los espacios no son caracteres alfabéticos, por lo que
+ la función devuelve False para esa entrada.
 """
